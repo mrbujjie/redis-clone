@@ -33,7 +33,7 @@ static void do_something(int connfd){
 	or
 	fprintf(stderr, "client says: %s\n", rbuf); */
 
-	char wbuf[]="vanakaam da mapla";
+	char wbuf[]="Ok,da...";
 	//write(connfd,wbuf,strlen(wbuf));
     ssize_t written = write(connfd, wbuf, strlen(wbuf));
 	if (written < 0) {

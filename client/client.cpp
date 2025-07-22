@@ -16,7 +16,7 @@
 using namespace std ;
 
 void do_something(int fd){
-  	char wbuff[]="theni la irunthu!...conncetion success";
+  	char wbuff[]="Hi,da server...it's me client";
 	int wn=write(fd,wbuff,strlen(wbuff));
 	if(wn<0){
 		cerr<<"message was not sent successfull"<<endl;
