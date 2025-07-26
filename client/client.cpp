@@ -45,12 +45,12 @@ static int32_t read_full(int fd ,char *buf , size_t n){
 }
 
 
-static int32_t multiple_tasks(int fd){
+static int32_t multiple_tasks(int fd , const char* message){
 	// sending message : 
 	uint32_t wlen=0;
 	
-	const char message[] = "hi server, it's new code with multiple requests from a single client";
-	char wbuf[4+sizeof(message)];
+	//const char message[] = "hi server, it's new code with multiple requests from a single client";
+	char wbuf[4+strlen(message)];
 	wlen=(uint32_t)strlen(message);
 	memcpy(wbuf,&wlen ,4);
 	memcpy(&wbuf[4],message,wlen);
@@ -104,7 +104,20 @@ int main(){
 		abort();
 
 	}
-	multiple_tasks(fd);
+	int err =0 ;
+	err = multiple_tasks(fd , "first message");
+	if(err){
+		goto L_DONE;
+	}
+	err=multiple_tasks(fd , "second message");
+	if(err){
+		goto L_DONE;
+	}
+	err=multiple_tasks(fd ,"third message");
+	if(err){
+		goto L_DONE;
+	}
+L_DONE:
 	close(fd);
 	return 0;
 }

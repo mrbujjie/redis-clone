@@ -45,9 +45,7 @@ static int32_t write_all(int fd, const char *buf, size_t n) {
         assert((size_t)rv <= n);
         n -= (size_t)rv;
         buf += rv;
-    }
-    return 0;
-}
+    
 
 static int32_t one_request(int connfd) {
     char rbuf[4 + k_max_msg];
@@ -74,7 +72,7 @@ static int32_t one_request(int connfd) {
     cerr << "client says: " << string(&rbuf[4], len) << endl;
 
     // Send reply
-    const char reply[] = "Okay!!!No problem , we'll come up with a plan";
+    const char reply[] = "world";
     char wbuf[4 + sizeof(reply)];
     len = (uint32_t)strlen(reply);
     memcpy(wbuf, &len, 4);
@@ -97,7 +95,7 @@ int main() {
     struct sockaddr_in addr = {};
     addr.sin_family = AF_INET;
     addr.sin_port = htons(5467);
-    addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
 
     int rv = bind(fd, (const struct sockaddr *)&addr, sizeof(addr));
     if (rv != 0) {
@@ -109,7 +107,7 @@ int main() {
     if (rv != 0) {
         die("listen()");
     }
-    cerr << "Listening on port 5467..." << endl;
+    cerr << "Listening on port 1234..." << endl;
 
     while (true) {
         struct sockaddr_in client_addr = {};
