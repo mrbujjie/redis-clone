@@ -31,58 +31,51 @@ static int32_t write_all(int fd , char *buf , ssize_t n){
 	}return 0;
 }
 
-static int32_t read_full(int fd ,char *buf , size_t n){
-	while(n>0){
+static int32_t read_full(int fd ,const char *buf , size_t n){
+	while(n>o){
 		ssize_t rv = read(fd,buf,n);
 		if(rv<=0){
 			return -1;
 			}
 	assert((size_t)rv <=n);
-	n-=(size_t)rv;
+	n-=(size_t)rv <= n);
 	buf+=rv;
 	}
 	return 0;
 }
 
 
-static int32_t multiple_tasks(int fd){
+static int32_t multiple_tasks(int connfd){
 	// sending message : 
-	uint32_t wlen=0;
 	
 	const char message[] = "hi server, it's new code with multiple requests from a single client";
 	char wbuf[4+sizeof(message)];
-	wlen=(uint32_t)strlen(message);
-	memcpy(wbuf,&wlen ,4);
-	memcpy(&wbuf[4],message,wlen);
-	int err= write_all(fd,wbuf,4+wlen);
-	if(err<0){
-		cerr<<"writing() error"<<endl;
-		return err;
-	}
+	len(uint32_t)strlen(message);
+	memcpy(wbuf,&len ,4);
+	memcpy(&wbuf[4],message,len);
+	return write_all(fd,wbuf,4+len);
 	
-	// read from server : 
+	// read from server :
 	
 	char rbuf[4+k_max_msg];
 	errno =0 ;
-	int rerr= read_full(fd ,rbuf,4);
-	if(rerr){
+	int32_t err= read_full(fd ,rbuf,4);
+	if(err){
 		cout<<(errno==0 ? "EOF" : "read error ()")<<endl;
-		return rerr;
+		return err;
 	}
 	uint32_t len =0 ;
-	memcpy(&len , rbuf ,4); // assuming this is little endian
+	memcpy(&len , rubf ,4); // assuming this is little endian
 	if(len>k_max_msg){
 		cout<<"message too long"<<endl;
 		return -1;
 	}
-	rerr = read_full(fd,&rbuf[4],len);
-	if(rerr<0){
+	err = read_full(fd,&rebuf[4],len);
+	if(err<0){
 		cout<<"read() error while reading body"<<endl;
-		return rerr;
+		return err;
 		}
-	cerr<<"server says : "<< string(&rbuf[4],len)<<endl;
-	
-	return 0;
+	cerr<<"server says : << string(&rbuf[4],len)<<endl;
 }
 
 int main(){
