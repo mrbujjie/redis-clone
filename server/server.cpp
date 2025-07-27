@@ -8,7 +8,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 #include <netinet/ip.h>
-
+#include <thread>
 using namespace std;
 
 const size_t k_max_msg = 4096;
@@ -80,6 +80,7 @@ static int32_t one_request(int connfd) {
     memcpy(wbuf, &len, 4);
     memcpy(&wbuf[4], reply, len);
     return write_all(connfd, wbuf, 4 + len);
+	close(connfd);
 }
 
 int main() {
@@ -122,15 +123,22 @@ int main() {
         }
         cerr << "Client connected." << endl;
 
-        while (true) {
+       /* while (true) {
             int32_t err = one_request(connfd);
             if (err) {
                 cerr << "Closing connection." << endl;
                 break;
             }
-        }
-
-        close(connfd);
+        } */
+		
+		// Thread-based concurrency
+		
+		thread t(one_request,connfd);
+		t.join();
+		cout<<"Main thread continues after join"<<endl;
+		
+		
+       // close(connfd);
     }
 
     return 0;
