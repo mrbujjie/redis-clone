@@ -134,9 +134,10 @@ int main() {
 		// Thread-based concurrency
 		
 		thread t(one_request,connfd);
-		t.join();
-		cout<<"Main thread continues after join"<<endl;
-		
+		//t.join();
+		//cout<<"Main thread continues after join"<<endl;
+		t.detach();
+		cout<<"The new thread runs independently and the main loop continues"<<endl;
 		
        // close(connfd);
     }
