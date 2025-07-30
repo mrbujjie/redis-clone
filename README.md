@@ -18,7 +18,7 @@ This project is divided into two main parts:
 | Request-Response Protocol  | ✅ Completed   |
 | Concurrent IO Models       | ✅ Completed   |
 | Event Loop (Part 1)        | ✅ Completed   |
-| Event Loop (Part 2)        | ⏳ Upcoming    |
+| Event Loop (Part 2)        | ✅ Completed   |
 | Key-Value Server           | ⏳ Upcoming    |
 
 ---
