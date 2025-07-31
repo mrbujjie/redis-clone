@@ -62,3 +62,17 @@ This project is divided into two main parts:
 ```bash
 g++ -std=c++17 -o server src/server.cpp src/helpers.c
 g++ -std=c++17 -o client src/client.cpp
+```
+# Handwritten docs will be based upon from the starting stage of the commit to the current status 
+
+1.Socket Programming : 
+
+<img width="4792" height="2361" alt="socket-programming-docs-01" src="https://github.com/user-attachments/assets/0df9924a-e1c7-45fa-988e-88cbf82166f9" />
+
+
+
+
+
+
+
+
