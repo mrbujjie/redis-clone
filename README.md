@@ -1,4 +1,4 @@
-# Redis Clone in C/C++
+<img width="6300" height="1999" alt="TCP-programming-docs-02" src="https://github.com/user-attachments/assets/a3c9401d-fb55-4b1e-b1a3-e7f68280b23b" /># Redis Clone in C/C++
 
 This is a Redis clone implemented from scratch using a mix of C and C++. It follows the learning journey of building Redis from the ground up, as structured in the "Build Your Own Redis" series. The goal is to understand Redis internals by manually implementing networking, the RESP protocol, event-driven architecture, and key-value storage.
 
@@ -65,9 +65,14 @@ g++ -std=c++17 -o client src/client.cpp
 ```
 # Handwritten docs will be based upon from the starting stage of the commit to the current status 
 
-1.Socket Programming : 
+1.Socket Programming Architecture : 
 
 <img width="4792" height="2361" alt="socket-programming-docs-01" src="https://github.com/user-attachments/assets/0df9924a-e1c7-45fa-988e-88cbf82166f9" />
+
+2.TCP Server and Client Programming Architecture :
+
+<img width="6300" height="1999" alt="TCP-programming-docs-02" src="https://github.com/user-attachments/assets/9be25872-1f52-4648-85d6-c54c82469e61" />
+
 
 
 
