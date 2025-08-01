@@ -77,6 +77,10 @@ g++ -Wall -Wextra -O2 client.cpp -o server
 
 <img width="4662" height="2500" alt="RESP-docs-03" src="https://github.com/user-attachments/assets/51beb2e7-2189-465d-a0c4-0cbd6d7d1fe2" />
 
+4.Concurrent IO Models : 
+
+<img width="3174" height="1940" alt="Concurrent-IO-Models-04" src="https://github.com/user-attachments/assets/5ac8d271-1b5d-431a-8f9b-b07c3dc1a902" />
+
 
 
 
