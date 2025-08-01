@@ -60,8 +60,8 @@ This project is divided into two main parts:
 ### Build
 
 ```bash
-g++ -std=c++17 -o server src/server.cpp src/helpers.c
-g++ -std=c++17 -o client src/client.cpp
+g++ -Wall -Wextra -O2 server.cpp -o server
+g++ -Wall -Wextra -O2 client.cpp -o server
 ```
 # Handwritten docs will be based upon from the starting stage of the commit to the current status 
 
