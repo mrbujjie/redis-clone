@@ -73,6 +73,11 @@ g++ -Wall -Wextra -O2 client.cpp -o server
 
 <img width="6300" height="1999" alt="TCP-programming-docs-02" src="https://github.com/user-attachments/assets/9be25872-1f52-4648-85d6-c54c82469e61" />
 
+3.Request-Response Protocol Architecture : 
+
+<img width="4662" height="2500" alt="RESP-docs-03" src="https://github.com/user-attachments/assets/51beb2e7-2189-465d-a0c4-0cbd6d7d1fe2" />
+
+
 
 
 
