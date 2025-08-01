@@ -81,6 +81,10 @@ g++ -Wall -Wextra -O2 client.cpp -o server
 
 <img width="3174" height="1940" alt="Concurrent-IO-Models-04" src="https://github.com/user-attachments/assets/5ac8d271-1b5d-431a-8f9b-b07c3dc1a902" />
 
+5.Event Loop Part 1 :
+
+<img width="6580" height="2140" alt="event-loop-part1" src="https://github.com/user-attachments/assets/40509d04-a281-4f6d-a57c-a649cb62d9df" />
+
 
 
 
