@@ -113,7 +113,7 @@ int main(){
 
         struct sockaddr_in addr={};
 	addr.sin_family=AF_INET;
-	addr.sin_port=htons(5467);
+	addr.sin_port=htons(1740);
 	addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
 
 	int rv=connect(fd,(const struct sockaddr*)&addr,sizeof(addr));
@@ -145,4 +145,3 @@ L_DONE:
 	close(fd);
 	return 0;
 }
-
