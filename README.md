@@ -85,8 +85,9 @@ g++ -Wall -Wextra -O2 client.cpp -o server
 
 <img width="6580" height="2140" alt="event-loop-part1" src="https://github.com/user-attachments/assets/40509d04-a281-4f6d-a57c-a649cb62d9df" />
 
+6.Event Loop Part 2 :
 
-
+<img width="4359" height="2260" alt="event-loop-part2" src="https://github.com/user-attachments/assets/c8343d64-77c8-4411-a7ab-edb15d2cf73f" />
 
 
 
