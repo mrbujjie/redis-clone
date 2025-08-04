@@ -89,6 +89,22 @@ g++ -Wall -Wextra -O2 client.cpp -o server
 
 <img width="4359" height="2260" alt="event-loop-part2" src="https://github.com/user-attachments/assets/c8343d64-77c8-4411-a7ab-edb15d2cf73f" />
 
+7.Key Value Server Logic:
+
+<img width="3095" height="1920" alt="key-value-server-docs-07" src="https://github.com/user-attachments/assets/4f75c525-a98f-4c6b-a47f-b7ae7011d1ca" />
+
+Key Value Server Results :
+
+Server side :
+
+<img width="504" height="234" alt="image" src="https://github.com/user-attachments/assets/2e62d7ed-5bd3-444e-acc5-c061cffba411" />
+
+Client side :
+
+<img width="345" height="317" alt="image" src="https://github.com/user-attachments/assets/ff84e5f5-6449-405d-b1a5-421be2326a97" />
+
+
+
 
 
 
