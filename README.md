@@ -19,7 +19,7 @@ This project is divided into two main parts:
 | Concurrent IO Models       | ✅ Completed   |
 | Event Loop (Part 1)        | ✅ Completed   |
 | Event Loop (Part 2)        | ✅ Completed   |
-| Key-Value Server           | ⏳ Upcoming    |
+| Key-Value Server           | ✅ Completed   |
 
 ---
 
